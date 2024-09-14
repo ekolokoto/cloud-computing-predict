@@ -35,7 +35,7 @@ def lambda_handler(event, context):
     # on a unique value to prevent errors when writing to DynamoDB. **
     
     # --- Insert your code here ---
-    rid = np.random.randint(1, 1000001, size=1000)  # <--- Replace this value with your code.
+    rid = np.random.randint(1, 1000000000, size=1000)  # <--- Replace this value with your code.
     # -----------------------------
     
     # ** Instantiate the DynamoDB service with the help of the boto3 library **

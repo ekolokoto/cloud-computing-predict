@@ -18,7 +18,8 @@
 import boto3    # Python AWS SDK
 import json     # Used for handling API-based data.
 import base64   # Needed to decode the incoming POST data
-import numpy as np
+# import numpy as np
+import random
 
 def lambda_handler(event, context):
     
@@ -35,7 +36,7 @@ def lambda_handler(event, context):
     # on a unique value to prevent errors when writing to DynamoDB. **
     
     # --- Insert your code here ---
-    rid = np.random.randint(1, 1000000001, size=1000)  # <--- Replace this value with your code.
+    rid = random.randint(1, 1000000000)  # <--- Replace this value with your code.
     # -----------------------------
     
     # ** Instantiate the DynamoDB service with the help of the boto3 library **
